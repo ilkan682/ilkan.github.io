@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compétences — Ilkan Guney</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+
+  <style>
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .skills-table th {
+      text-align: left;
+      padding: 14px;
+      font-size: 0.9rem;
+      background: rgba(79,142,247,0.15);
+      color: #4f8ef7;
+      font-family: "Syne", sans-serif;
+    }
+
+    .skills-table td {
+      padding: 14px;
+      vertical-align: top;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.85);
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .skills-table tr:hover {
+      background: rgba(255,255,255,0.03);
+    }
+
+    .ac-item {
+      background: rgba(255,255,255,0.03);
+      padding: 16px;
+      border-radius: 12px;
+      margin-top: 12px;
+      line-height: 1.6;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .ac-item strong {
+      color: #4f8ef7;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="bg-mesh"></div>
+<div class="bg-grid"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <span class="brand-badge">IG</span>
+    <span>Ilkan Guney</span>
+  </a>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <nav class="nav" id="nav">
+    <a href="index.html">Accueil</a>
+    <a href="parcours.html">Parcours</a>
+    <a href="projets.html">Projets</a>
+    <a href="competences.html" class="active">Compétences</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="page">
+
+  <!-- TITRE -->
+  <section class="section-title">
+    <div>
+      <h2>Compétences</h2>
+      <p>Compétences techniques, réseaux et humaines acquises en BUT Réseaux & Télécommunications</p>
+    </div>
+  </section>
+
+  <!-- TABLEAU -->
+  <section class="card">
+
+    <h3>Compétences générales</h3>
+
+    <table class="skills-table">
+
+      <thead>
+        <tr>
+          <th>Réseaux & Télécoms</th>
+          <th>Compétences techniques</th>
+          <th>Compétences humaines</th>
+          <th>Outils</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            Routage IP<br>
+            Adressage IP<br>
+            Configuration de switchs et routeurs<br>
+            Administration réseau
+          </td>
+
+          <td>
+            Python<br>
+            Linux<br>
+            HTML / CSS<br>
+            Bureautique
+          </td>
+
+          <td>
+            Travail en équipe<br>
+            Autonomie<br>
+            Communication<br>
+            Organisation
+          </td>
+
+          <td>
+            VirtualBox<br>
+            Cisco Packet Tracer<br>
+            Windows<br>
+            EVE-NG<br>
+            GNS3
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </section>
+
+  <!-- AC -->
+  <section class="card">
+
+  <h3>Compétences acquises au cours de l’année</h3>
+
+  <div class="ac-item">
+    <strong>AC11.01</strong> | Maîtriser les lois fondamentales de l’électricité afin d’intervenir sur des équipements de réseaux et de télécommunications.<br>
+    J’ai acquis cette compétence grâce aux TP réalisés en R1.04, où j’ai effectué de nombreux branchements de câbles électriques.
+  </div>
+
+  <div class="ac-item">
+    <strong>AC11.02</strong> | Comprendre l’architecture et les fondements des systèmes numériques, des communications et de l’Internet.<br>
+    Je dois encore m’améliorer, notamment en programmation Python. J’ai rencontré des difficultés en R1.07 et R2.08.
+  </div>
+
+  <div class="ac-item">
+    <strong>AC11.03</strong> | Configurer les fonctions de base d’un réseau local.<br>
+    J’ai acquis cette compétence grâce à la SAÉ 1.02, où nous avons conçu un réseau pour une entreprise.
+  </div>
+
+  <div class="ac-item">
+    <strong>AC11.04</strong> | Interagir avec les systèmes d’exploitation pour la configuration et l’administration des réseaux et services.<br>
+    J’ai acquis cette compétence grâce aux TP réalisés sous Linux et machines virtuelles en R1.02, R1.08, R2.01 et R2.02.
+  </div>
+
+  <div class="ac-item">
+    <strong>AC11.05</strong> | Identifier les dysfonctionnements d’un réseau local et savoir les signaler.<br>
+    Je dois encore progresser, car je ne détecte pas toujours facilement les problèmes en R1.02, R1.05 et R2.01.
+  </div>
+
+  <div class="ac-item">
+    <strong>AC11.06</strong> | Installer un poste client et expliquer la procédure mise en place.<br>
+    Compétence acquise, que je maîtrise globalement bien grâce aux cours en R2.04.
+  </div>
+
+  <div class="ac-item">
+    <strong>AC12.01</strong> | Mesurer, analyser et commenter des signaux.<br>
+    J’ai acquis cette compétence grâce à la SAÉ 1.03, à l’aide d’outils comme WiFi Analyzer et les heatmaps.
+  </div>
+
+  <div class="ac-item">
+    <strong>AC12.02</strong> | Caractériser des systèmes de transmission élémentaires et comprendre leur modélisation mathématique.<br>
+    J’ai compris le fonctionnement global, mais je dois encore m’améliorer dans les calculs. Nous avons vu cela dans les ressources R1.13, R2.13, R2.14, R2.05 et R2.06.
+  </div>
+
+  <div class="ac-item">
+    <strong>AC12.03</strong> | Déployer des supports de transmission.<br>
+    Compétence travaillée lors de la SAÉ 1.03, où nous avons configuré un point d’accès Wi-Fi.
+  </div>
+
+  <div class="ac-item">
+    <strong>AC12.04</strong> | Connecter les systèmes de ToIP.<br>
+    Compétence abordée en cours (à compléter / en cours d’acquisition).
+  </div>
+
+  <div class="ac-item">
+    <strong>AC12.05</strong> | Communiquer avec un interlocuteur et adapter son discours.<br>
+    J’ai acquis cette compétence lors de l’oral de la SAÉ 1.03, où nous avons présenté nos mesures et analysé nos résultats.
+  </div>
+
+  <div class="ac-item">
+    <strong>AC13.01</strong> | Utiliser un système informatique et ses outils.<br>
+    Compétence acquise grâce à Linux et Windows, notamment en R1.08, R1.02 et R2.01.
+  </div>
+
+  <div class="ac-item">
+    <strong>AC13.02</strong> | Lire, exécuter, corriger et modifier un programme.<br>
+    Je sais lire et exécuter un programme, mais je dois encore progresser en correction et modification. (R1.07, R2.08)
+  </div>
+
+  <div class="ac-item">
+    <strong>AC13.03</strong> | Traduire un algorithme dans un langage de programmation adapté.<br>
+    Compétence non acquise, avec des difficultés importantes observées en R1.07.
+  </div>
+
+  <div class="ac-item">
+    <strong>AC13.04</strong> | Connaître l’architecture et les technologies d’un site web.<br>
+    Compétence acquise grâce à la SAÉ 1.01 (réalisation d’un CV en HTML/CSS) ainsi qu’en R1.09 et R2.09.
+  </div>
+
+  <div class="ac-item">
+    <strong>AC13.05</strong> | Choisir les mécanismes de gestion de données adaptés et argumenter ses choix.<br>
+    Je dois encore m’améliorer, notamment sur les notions vues en R1.13.
+  </div>
+
+  <div class="ac-item">
+    <strong>AC13.06</strong> | S’intégrer dans un environnement de développement et de travail collaboratif.<br>
+    Compétence acquise grâce aux projets en groupe, où nous devions communiquer et collaborer efficacement (SAÉ 1.03, 1.05 et 1.01).
+  </div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>Portfolio · Ilkan Guney · BUT Réseaux & Télécoms</p>
+</footer>
+
+</body>
+</html>

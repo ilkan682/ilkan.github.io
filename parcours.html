@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parcours — Ilkan Guney</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="bg-mesh"></div>
+  <div class="bg-grid"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-badge">IG</span><span>Ilkan Guney</span></a>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Accueil</a>
+      <a href="parcours.html" class="active">Parcours</a>
+      <a href="projets.html">Projets</a>
+      <a href="competences.html">Compétences</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="section-title">
+      <div><h2>Parcours</h2><p>Formation et expériences professionnelles.</p></div>
+    </section>
+
+    <div style="display:grid;gap:28px;">
+
+      <section class="panel">
+        <h3>🎓 Formation</h3>
+        <div class="timeline">
+          <article class="item">
+            <div class="meta">Depuis septembre 2025 · Université de Haute-Alsace, Colmar</div>
+            <h3>B.U.T. Réseaux et Télécommunications</h3>
+            <p>Formation orientée infrastructures réseau, systèmes informatiques, services associés, et télécommunications. Projets en équipe (SAÉ), TP pratiques sur EVE-NG, Cisco, Linux.</p>
+            <div class="tags">
+              <span class="tag">Réseau IP</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Cisco</span>
+              <span class="tag">EVE-NG</span>
+              <span class="tag">Télécoms</span>
+            </div>
+          </article>
+
+          <article class="item">
+            <div class="meta">Septembre 2022 – Juin 2025 · Lycée Louis Armand, Mulhouse</div>
+            <h3>Baccalauréat STI2D</h3>
+            <p>Parcours scientifique et technologique, spécialité Sciences & Technologie de l'Industrie et du Développement Durable. Acquisition des bases en sciences physiques, électronique et informatique.</p>
+            <div class="tags">
+              <span class="tag">Sciences &amp; Technologie</span>
+              <span class="tag">STI2D</span>
+              <span class="tag">Obtenu</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3>💼 Expérience professionnelle</h3>
+        <div class="timeline">
+          <article class="item">
+            <div class="meta">Décembre 2021 · OCI Informatique, Brunstatt-Didenheim</div>
+            <h3>Stage d'observation – Technicien informatique</h3>
+            <p>Assistance technique, maintenance préventive et curative, dépannage de postes clients. Découverte du métier de technicien en environnement professionnel réel.</p>
+            <div class="tags">
+              <span class="tag">Support</span>
+              <span class="tag">Maintenance</span>
+              <span class="tag">Dépannage PC</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer"><p>Portfolio · Ilkan Guney · BUT Réseaux &amp; Télécoms · 2025</p></footer>
+</body>
+</html>

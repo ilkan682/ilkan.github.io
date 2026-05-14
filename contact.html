@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Ilkan Guney</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<div class="bg-mesh"></div>
+<div class="bg-grid"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <span class="brand-badge">IG</span>
+    <span>Ilkan Guney</span>
+  </a>
+
+  <nav class="nav">
+    <a href="index.html">Accueil</a>
+    <a href="parcours.html">Parcours</a>
+    <a href="projets.html">Projets</a>
+    <a href="competences.html">Compétences</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<main class="page">
+
+  <section class="section-title">
+    <div>
+      <h2>Contact</h2>
+      <p>Envoyez-moi un message directement par email</p>
+    </div>
+  </section>
+
+  <section class="card">
+
+    <!-- ⚠️ IMPORTANT : remplace TON_EMAIL -->
+    <form action="https://formspree.io/f/maqvgyww" method="POST">
+
+      <label>Nom</label>
+      <input type="text" name="name" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Message</label>
+      <textarea name="message" rows="6" required></textarea>
+
+      <button type="submit">Envoyer</button>
+
+    </form>
+
+  </section>
+
+</main>
+
+</body>
+</html>

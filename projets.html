@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets — Ilkan Guney</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <style>
+    .sae-card {
+      border-radius: 22px; border: 1px solid var(--line);
+      background: rgba(255,255,255,.03); overflow: hidden;
+      transition: .25s ease;
+    }
+    .sae-card:hover { transform: translateY(-3px); border-color: rgba(79,142,247,.35); box-shadow: 0 20px 50px rgba(0,0,0,.4); }
+    .sae-header {
+      padding: 22px 26px 0; display: flex; align-items: center; gap: 14px;
+    }
+    .sae-num {
+      font-family: var(--font-head); font-size: .8rem; font-weight: 700; letter-spacing: .5px;
+      padding: 6px 12px; border-radius: 10px;
+      background: rgba(79,142,247,.15); border: 1px solid rgba(79,142,247,.30); color: var(--accent);
+    }
+    .sae-header h3 { font-family: var(--font-head); font-size: 1.1rem; margin: 0; }
+    .sae-body { padding: 16px 26px 26px; }
+    .sae-body p { color: var(--muted); font-size: .92rem; line-height: 1.7; }
+
+    /* ── Images fixes ── */
+    .sae-imgs { display: grid; gap: 10px; margin: 16px 0; }
+    .sae-imgs.two   { grid-template-columns: 1fr 1fr; }
+    .sae-imgs.three { grid-template-columns: 1fr 1fr 1fr; }
+
+    .sae-imgs img {
+      width: 100%;
+      height: 220px;           /* hauteur fixe → plus de zoom variable */
+      border-radius: 14px;
+      object-fit: contain;     /* tout voir, pas de recadrage */
+      object-position: center;
+      background: rgba(0,0,0,.25);   /* fond neutre derrière contain */
+      border: 1px solid var(--line);
+      display: block;
+    }
+
+    /* Pour la SAÉ 1.02 et 2.01 qui ont besoin d'un peu plus de hauteur */
+    .sae-imgs img.tall { height: 300px; }
+
+    .sae-imgs .img-label {
+      font-size: .78rem; color: var(--muted); text-align: center; margin-top: 4px;
+    }
+    .sae-imgs .img-wrap { display: flex; flex-direction: column; }
+    .proj-full-grid { display: grid; gap: 24px; }
+  </style>
+</head>
+<body>
+  <div class="bg-mesh"></div>
+  <div class="bg-grid"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-badge">IG</span><span>Ilkan Guney</span></a>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="nav" id="nav">
+      <a href="index.html">Accueil</a>
+      <a href="parcours.html">Parcours</a>
+      <a href="projets.html" class="active">Projets</a>
+      <a href="competences.html">Compétences</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="section-title">
+      <div><h2>Projets &amp; SAÉ</h2><p>Situations d'Apprentissage et d'Évaluation réalisées en BUT R&amp;T.</p></div>
+    </section>
+
+    <div class="proj-full-grid">
+
+      <!-- SAE 1.01 -->
+      <div class="sae-card">
+        <div class="sae-header">
+          <span class="sae-num">SAÉ 1.01</span>
+          <h3>Se présenter sur Internet</h3>
+        </div>
+        <div class="sae-body">
+          <div class="tags" style="margin-bottom:14px;">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive</span><span class="tag">2024-2025</span>
+          </div>
+          <p>
+            L'objectif de cette SAÉ était de créer un CV en ligne en HTML et CSS afin de se présenter sur Internet. 
+            J'ai réalisé un site web multi-pages comprenant une page d'accueil, un parcours, des compétences et un formulaire de contact. 
+            J'ai appris à structurer du contenu HTML, à styliser avec CSS, à rendre le site responsive pour mobile.
+            Ce projet m'a permis d'acquérir la compétence AC13.04 (architecture et technologies d'un site web).
+          </p>
+          <div class="sae-imgs">
+            <div class="img-wrap">
+              <img src="SAE.png" alt="Capture du CV en ligne — SAÉ 1.01" />
+              <span class="img-label">Capture du CV interactif réalisé en HTML/CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAE 1.02 -->
+      <div class="sae-card">
+        <div class="sae-header">
+          <span class="sae-num">SAÉ 1.02</span>
+          <h3>S'initier au réseau informatique</h3>
+        </div>
+        <div class="sae-body">
+          <div class="tags" style="margin-bottom:14px;">
+            <span class="tag">EVE-NG</span><span class="tag">VLAN</span><span class="tag">Cisco</span><span class="tag">DHCP</span><span class="tag">2024-2025</span>
+          </div>
+          <p>
+            Dans cette SAÉ, nous devions concevoir et réaliser un réseau informatique pour une entreprise en utilisant le simulateur 
+            <strong>EVE-NG</strong>. J'ai configuré des routeurs et commutateurs Cisco, mis en place des VLANs, 
+            du routage inter-VLAN et des adresses IP statiques. Ce projet m'a permis d'acquérir la compétence AC11.03 
+            (configurer les fonctions de base du réseau local) et de comprendre l'architecture réseau d'une entreprise.
+          </p>
+          <div class="sae-imgs">
+            <div class="img-wrap">
+              <img src="SAE-1.02.png" alt="Topologie réseau EVE-NG — SAÉ 1.02" class="tall" />
+              <span class="img-label">Topologie réseau réalisée sous EVE-NG avec routeurs et commutateurs Cisco</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAE 1.03 -->
+      <div class="sae-card">
+        <div class="sae-header">
+          <span class="sae-num">SAÉ 1.03</span>
+          <h3>Découvrir un dispositif de transmission</h3>
+        </div>
+        <div class="sae-body">
+          <div class="tags" style="margin-bottom:14px;">
+            <span class="tag">Wi-Fi</span><span class="tag">Heatmap</span><span class="tag">802.11a</span><span class="tag">802.11g</span><span class="tag">Analyse RF</span><span class="tag">2024-2025</span>
+          </div>
+          <p>
+            Cette SAÉ portait sur l'analyse et la caractérisation des réseaux sans fil Wi-Fi au sein d'un bâtiment. 
+            Nous avons utilisé des outils comme <strong>WiFi Analyzer</strong> et un logiciel de <strong>heatmap</strong> 
+            pour visualiser la couverture radio selon les différents standards : 802.11a (5 GHz) et 802.11g (2.4 GHz). 
+            L'objectif était de mesurer les zones de couverture, identifier les zones mortes, 
+            comparer les portées et débits des deux standards, puis présenter les résultats à l'oral.
+            Cela m'a permis d'acquérir les compétences AC12.01 (mesurer et analyser des signaux) et 
+            AC12.03 (déployer des supports de transmission), ainsi que AC12.05 (communiquer les résultats).
+          </p>
+          <div class="sae-imgs two">
+            <div class="img-wrap">
+              <img src="SAEE-13.png" alt="Heatmap réseau 802.11a" />
+              <span class="img-label">📶 Heatmap réseau 802.11a (5 GHz) — couverture limitée mais stable</span>
+            </div>
+            <div class="img-wrap">
+              <img src="SAE-13.png" alt="Heatmap réseau 802.11g" />
+              <span class="img-label">📡 Heatmap réseau 802.11g (2.4 GHz) — meilleure portée</span>
+            </div>
+          </div>
+          <p style="margin-top:10px;">
+            La heatmap en bleu (802.11a) montre une couverture plus concentrée et moins longue portée sur 5 GHz. 
+            La heatmap colorée (802.11g) illustre une meilleure pénétration sur 2.4 GHz avec une zone de couverture plus étendue, 
+            mais avec plus d'interférences potentielles. Ces mesures nous ont permis de recommander les bons points d'accès selon les besoins.
+          </p>
+        </div>
+      </div>
+
+      <!-- SAE 2.01 -->
+      <div class="sae-card">
+        <div class="sae-header">
+          <span class="sae-num">SAÉ 2.01</span>
+          <h3>Construire un réseau informatique pour une petite structure</h3>
+        </div>
+        <div class="sae-body">
+          <div class="tags" style="margin-bottom:14px;">
+            <span class="tag">EVE-NG</span><span class="tag">VLAN</span><span class="tag">DHCP</span><span class="tag">FTP</span><span class="tag">Cisco</span><span class="tag">2025</span>
+          </div>
+          <p>
+            Extension de la SAÉ 1.02, cette SAÉ visait à concevoir un réseau complet pour une petite structure avec des services avancés. 
+            Nous avons configuré plusieurs VLANs (administration, production, développement, sauvegarde), 
+            du routage inter-VLAN, un <strong>serveur DHCP</strong> pour l'attribution automatique des adresses IP, 
+            et un <strong>serveur FTP</strong> pour le partage de fichiers. 
+            L'infrastructure complète incluait routeurs Cisco (R1, R2, R3), commutateurs Layer 2 et Layer 3, 
+            et plusieurs postes clients/serveurs Linux.
+          </p>
+          <div class="sae-imgs">
+            <div class="img-wrap">
+              <img src="sae-201.jpeg" alt="Architecture réseau SAÉ 2.01 sur EVE-NG" class="tall" />
+              <span class="img-label">Architecture réseau complète — routeurs R1/R2/R3, commutateurs Cisco L2/L3, serveurs DHCP/FTP sous EVE-NG</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAE 2.02 -->
+      <div class="sae-card">
+        <div class="sae-header">
+          <span class="sae-num">SAÉ 2.02</span>
+          <h3>Mesurer et caractériser un signal ou un système</h3>
+        </div>
+        <div class="sae-body">
+          <div class="tags" style="margin-bottom:14px;">
+            <span class="tag">Radio FM</span><span class="tag">Électronique</span><span class="tag">Android</span><span class="tag">Fabrication</span><span class="tag">2025</span>
+          </div>
+          <p>
+            Pour cette SAÉ, j'ai conçu et fabriqué une <strong>radio portable</strong> entièrement fonctionnelle. 
+            J'ai utilisé une structure en bois que j'ai découpée et assemblée moi-même, dans laquelle j'ai intégré 
+            3 membranes (haut-parleurs), un écran d'affichage qui montre les stations en cours, 
+            et un module radio contrôlable via une <strong>application Android</strong>. 
+            Ce projet m'a permis de comprendre les principes de transmission radio FM, la modulation de signal, 
+            et l'intégration de composants électroniques dans un boîtier physique. 
+            Il correspond aux compétences AC12.02 (caractériser des systèmes de transmission) et AC12.01 (mesurer et analyser des signaux).
+          </p>
+          <!-- 3 vraies photos de la radio -->
+          <div class="sae-imgs three">
+            <div class="img-wrap">
+              <img src="SAE2.02.jpeg" alt="Radio FM — vue de face avec haut-parleur principal" />
+              <span class="img-label">Vue de face — haut-parleur principal intégré dans le boîtier bois peint</span>
+            </div>
+            <div class="img-wrap">
+              <img src="SAE2.02 (2).jpeg" alt="Radio FM — vue du dessus avec écran OLED et haut-parleur" />
+              <span class="img-label">Vue du dessus — écran OLED affichant la station et membrane centrale</span>
+            </div>
+            <div class="img-wrap">
+              <img src="SAE2.02 (3).jpeg" alt="Radio FM — vue latérale avec tweeter vissé" />
+              <span class="img-label">Vue latérale — tweeter vissé sur le côté du boîtier</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer"><p>Portfolio · Ilkan Guney · BUT Réseaux &amp; Télécoms · 2025</p></footer>
+</body>
+</html>
