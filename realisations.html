@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réalisations — Portfolio Ilkan GUNEY</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style du bouton de retour vers le portfolio principal */
+        .btn-back-portfolio {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 10px 15px 20px 15px;
+            padding: 10px 14px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #4f8ef7;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .btn-back-portfolio:hover {
+            background: rgba(79, 142, 247, 0.15);
+            border-color: rgba(79, 142, 247, 0.3);
+            color: #ffffff;
+            transform: translateX(-2px);
+        }
+        .nav-separator {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin: 15px;
+        }
+    </style>
 </head>
 <body>
     <aside class="sidebar">
@@ -13,6 +41,14 @@
             <h2>Ilkan GUNEY</h2>
             <div class="subtitle">BUT Réseaux &amp; Télécoms · S2</div>
         </div>
+
+        <!-- BOUTON DE RETOUR VERS LA PAGE PROJETS -->
+        <a href="projets.html" class="btn-back-portfolio">
+            <span>←</span> Retour aux Projets
+        </a>
+
+        <div class="nav-separator"></div>
+
         <ul class="nav-menu">
             <li class="nav-item">
                 <a href="indexx.html"><span class="nav-icon">⌂</span><span class="nav-label">Accueil</span></a>
@@ -55,10 +91,10 @@
             </div>
             <p>
                 Sur la machine virtuelle Debian BDD, j'ai configuré les paramètres réseaux pour qu'on a acess a la vm depuis des pc distant  
+            </p>
             <ul>
                 <li>
                     <strong>Mode Accès par pont  :</strong> j'ai mis l'interface sur VirtualBox  en mode accés par pont pour sortir de la VM
-                
                 </li>
                 <li>
                     <strong>Résolution DNS locale :</strong> Ajout du nom d'hôte dans <code>/etc/hosts</code> pour utiliser
