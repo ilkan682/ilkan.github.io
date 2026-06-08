@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio SAÉ — Ilkan GUNEY</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style du bouton de retour vers le portfolio principal */
+        .btn-back-portfolio {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 10px 15px 20px 15px;
+            padding: 10px 14px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #4f8ef7;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .btn-back-portfolio:hover {
+            background: rgba(79, 142, 247, 0.15);
+            border-color: rgba(79, 142, 247, 0.3);
+            color: #ffffff;
+            transform: translateX(-2px);
+        }
+        .nav-separator {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin: 15px;
+        }
+    </style>
 </head>
 <body>
     <aside class="sidebar">
@@ -13,6 +41,14 @@
             <h2>Ilkan GUNEY</h2>
             <div class="subtitle">BUT Réseaux &amp; Télécoms · S2</div>
         </div>
+
+        <!-- BOUTON DE RETOUR VERS LA PAGE PROJETS -->
+        <a href="projets.html" class="btn-back-portfolio">
+            <span>←</span> Retour aux Projets
+        </a>
+
+        <div class="nav-separator"></div>
+
         <ul class="nav-menu">
             <li class="nav-item active">
                 <a href="index.html">
@@ -92,7 +128,6 @@
             </p>
             <p>
                 L'objectif  de cette SAÉ était d'apprendre à <strong> utilser djengo comprendre comment sa fonctionne etc..</strong>
-               
             </p>
             <ul>
                 <li>L'application <strong>Django</strong> s'exécute sur une VM DEBIAN 13.</li>
@@ -111,9 +146,9 @@
             </div>
             <p>Ce projet a été mené en équipe de trois étudiants :</p>
             <ul>
-                <li><strong>Ilkan GUNEY (BDD & Eleves)</strong> — Modélisation et sécurisation SQL, développement du système CRUD (Ajout/Modif) et optimisation des requêtes de la base de données.</li>
-<li><strong>Hussain (Matières & Serveur)</strong> — Gestion de la connexion BDD, affichage des matières, développement du CRUD matières, configuration réseau et paramétrage de Gunicorn/Nginx.</li>
-<li><strong>Rafael (CSV & Bulletins)</strong> — Conception des pages HTML, lecture et traitement des fichiers CSV pour l'enregistrement automatique des notes dans MySQL.</li>
+                <li><strong>Ilkan GUNEY (BDD &amp; Eleves)</strong> — Modélisation et sécurisation SQL, développement du système CRUD (Ajout/Modif) et optimisation des requêtes de la base de données.</li>
+                <li><strong>Hussain (Matières &amp; Serveur)</strong> — Gestion de la connexion BDD, affichage des matières, développement du CRUD matières, configuration réseau et paramétrage de Gunicorn/Nginx.</li>
+                <li><strong>Rafael (CSV &amp; Bulletins)</strong> — Conception des pages HTML, lecture et traitement des fichiers CSV pour l'enregistrement automatique des notes dans MySQL.</li>
             </ul>
         </div>
 
