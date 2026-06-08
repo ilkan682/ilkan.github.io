@@ -52,6 +52,30 @@
     }
     .sae-imgs .img-wrap { display: flex; flex-direction: column; }
     .proj-full-grid { display: grid; gap: 24px; }
+
+    /* ── Bouton d'action pour lien externe ── */
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 10px 20px;
+      border-radius: 12px;
+      background: rgba(79,142,247,0.15);
+      border: 1px solid rgba(79,142,247,0.3);
+      color: #4f8ef7;
+      font-family: var(--font-head);
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-action:hover {
+      background: #4f8ef7;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(79,142,247,0.25);
+    }
   </style>
 </head>
 <body>
@@ -210,21 +234,47 @@
             et l'intégration de composants électroniques dans un boîtier physique. 
             Il correspond aux compétences AC12.02 (caractériser des systèmes de transmission) et AC12.01 (mesurer et analyser des signaux).
           </p>
-          <!-- 3 vraies photos de la radio -->
           <div class="sae-imgs three">
             <div class="img-wrap">
               <img src="SAE2.02.jpeg" alt="Radio FM — vue de face avec haut-parleur principal" />
-              <span class="img-label">Vue de face — haut-parleur principal intégré dans le boîtier bois peint</span>
+              <span class="img-label">Vue de face — boîtier bois peint</span>
             </div>
             <div class="img-wrap">
               <img src="SAE2.02 (2).jpeg" alt="Radio FM — vue du dessus avec écran OLED et haut-parleur" />
-              <span class="img-label"> Vue latérale — tweeter vissé sur le côté du boîtier</span>
+              <span class="img-label">Vue latérale — intégration tweeter</span>
             </div>
             <div class="img-wrap">
               <img src="SAE2.02 (3).jpeg" alt="Radio FM — vue latérale avec tweeter vissé" />
-              <span class="img-label">Vue du dessus — écran OLED affichant la station et membrane centrale</span>
+              <span class="img-label">Vue du dessus — écran OLED</span>
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- NEW: SAE 2.03 -->
+      <div class="sae-card">
+        <div class="sae-header">
+          <span class="sae-num">SAÉ 2.03</span>
+          <h3>Mettre en place une solution informatique pour l’entreprise</h3>
+        </div>
+        <div class="sae-body">
+          <div class="tags" style="margin-bottom:14px;">
+            <span class="tag">Services Réseaux</span><span class="tag">Administration Système</span><span class="tag">Synthèse</span><span class="tag">2025</span>
+          </div>
+          <p>
+            Cette SAÉ se concentre sur le déploiement d'une infrastructure applicative et système répondant aux besoins opérationnels d'une entreprise. Elle regroupe la configuration de serveurs d'infrastructure, la sécurisation des accès et la mise à disposition d'outils collaboratifs ou de gestion d'utilisateurs. L'analyse des besoins m'a permis de consolider la mise en œuvre technique et d'adopter une démarche réflexive globale sur les choix d'architecture logicielle.
+          </p>
+          <div class="sae-imgs">
+            <div class="img-wrap">
+              <img src="image.png" alt="Aperçu de la solution informatique SAÉ 2.03" />
+              <span class="img-label">Architecture et services de la solution informatique déployée</span>
+            </div>
+          </div>
+          
+          <!-- BOUTON VERS TON DOSSIER/FICHIER INDEXX.HTML -->
+          <a href="indexx.html" class="btn-action">
+            Voir le projet complet et les synthèses →
+          </a>
         </div>
       </div>
 
