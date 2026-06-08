@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio SAÉ — Ilkan GUNEY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="profile-section">
+            <div class="profile-tag">En ligne</div>
+            <h2>Ilkan GUNEY</h2>
+            <div class="subtitle">BUT Réseaux &amp; Télécoms · S2</div>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item active">
+                <a href="index.html">
+                    <span class="nav-icon">⌂</span>
+                    <span class="nav-label">Accueil</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="realisations.html">
+                    <span class="nav-icon">⚙</span>
+                    <span class="nav-label">Réalisations &amp; Preuves</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="competences.html">
+                    <span class="nav-icon">✦</span>
+                    <span class="nav-label">Compétences Validées</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="reflexion.html">
+                    <span class="nav-icon">◈</span>
+                    <span class="nav-label">Démarche Réflexive</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="english.html">
+                    <span class="nav-icon">🇬🇧</span>
+                    <span class="nav-label">English Abstract</span>
+                </a>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <div class="sys-info">
+                <div>SAÉ &gt; <span>S2-réseau</span></div>
+                <div>stack &gt; <span>Django · MariaDB</span></div>
+                <div>env &gt; <span>Debian VM</span></div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-header">
+            <div class="breadcrumb">Portfolio / <span>Accueil</span></div>
+            <h1>Bienvenue sur mon<br><em>Portfolio de Compétences</em></h1>
+            <p class="desc">Présentation  de la SAÉ · Semestre 2 · BUT R&amp;T</p>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-tile">
+                <div class="label">Projet</div>
+                <div class="value accent">gestion-notes</div>
+            </div>
+            <div class="info-tile">
+                <div class="label">Framework</div>
+                <div class="value">Django (Python)</div>
+            </div>
+            <div class="info-tile">
+                <div class="label">Base de données</div>
+                <div class="value">MariaDB · SQL</div>
+            </div>
+            <div class="info-tile">
+                <div class="label">Infrastructure</div>
+                <div class="value green">Debian VM · VirtualBox</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">📌</div>
+                <h3>Contexte du Projet</h3>
+                <span class="card-tag">SAÉ S2</span>
+            </div>
+            <p>
+                Pour le deuxième semestre , nous avons développé une
+                <strong>Application Web de Gestion de Notes</strong> qui s'appelle  <code>gestion-notes</code>.
+            </p>
+            <p>
+                L'objectif  de cette SAÉ était d'apprendre à <strong> utilser djengo comprendre comment sa fonctionne etc..</strong>
+               
+            </p>
+            <ul>
+                <li>L'application <strong>Django</strong> s'exécute sur une VM DEBIAN 13.</li>
+                <li>La base de données <strong>MariaDB</strong> est hébergée et isolée sur un serveur virtuel dédié <strong>Debian</strong> via VirtualBox.</li>
+            </ul>
+            <p>
+                L'objectif était de mettre en place la configuration réseau, le routage et les accès SQL pour lier ces deux machines distantes de manière transparente.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">👥</div>
+                <h3>Équipe Projet</h3>
+                <span class="card-tag">Collaboratif</span>
+            </div>
+            <p>Ce projet a été mené en équipe de trois étudiants :</p>
+            <ul>
+                <li><strong>Ilkan GUNEY (BDD & Eleves)</strong> — Modélisation et sécurisation SQL, développement du système CRUD (Ajout/Modif) et optimisation des requêtes de la base de données.</li>
+<li><strong>Hussain (Matières & Serveur)</strong> — Gestion de la connexion BDD, affichage des matières, développement du CRUD matières, configuration réseau et paramétrage de Gunicorn/Nginx.</li>
+<li><strong>Rafael (CSV & Bulletins)</strong> — Conception des pages HTML, lecture et traitement des fichiers CSV pour l'enregistrement automatique des notes dans MySQL.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🗺</div>
+                <h3>Navigation du Portfolio</h3>
+            </div>
+            <ul>
+                <li><strong>Réalisations &amp; Preuves</strong> — Détails techniques des tâches accomplies avec captures d'écran</li>
+                <li><strong>Compétences Validées</strong> — Correspondance avec le référentiel BUT (AC)</li>
+                <li><strong>Démarche Réflexive</strong> — Analyse critique des pannes et résolutions</li>
+                <li><strong>English Abstract</strong> — Résumé technique en anglais</li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

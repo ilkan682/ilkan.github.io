@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Démarche Réflexive — Portfolio Ilkan GUNEY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="profile-section">
+            <div class="profile-tag">En ligne</div>
+            <h2>Ilkan GUNEY</h2>
+            <div class="subtitle">BUT Réseaux &amp; Télécoms · S2</div>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html"><span class="nav-icon">⌂</span><span class="nav-label">Accueil</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="realisations.html"><span class="nav-icon">⚙</span><span class="nav-label">Réalisations &amp; Preuves</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="competences.html"><span class="nav-icon">✦</span><span class="nav-label">Compétences Validées</span></a>
+            </li>
+            <li class="nav-item active">
+                <a href="reflexion.html"><span class="nav-icon">◈</span><span class="nav-label">Démarche Réflexive</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="english.html"><span class="nav-icon">🇬🇧</span><span class="nav-label">English Abstract</span></a>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <div class="sys-info">
+                <div>SAÉ &gt; <span>S2-réseau</span></div>
+                <div>stack &gt; <span>Django · MariaDB</span></div>
+                <div>env &gt; <span>Debian VM</span></div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-header">
+            <div class="breadcrumb">Portfolio / <span>Démarche Réflexive</span></div>
+            <h1>Démarche <em>Réflexive</em><br>&amp; Diagnostic</h1>
+            <p class="desc">Analyse critique des pannes rencontrées et méthodologie de résolution</p>
+        </div>
+
+        <!-- PANNE 1 -->
+     <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🔴</div>
+                <h3>Résolution d'un problème de connexion (Connection Refused)</h3>
+                <span class="card-tag">Incident #1</span>
+            </div>
+            <p>
+                <strong>problème constaté :</strong> Lors des premiers tests, l'application Django ne parvenait pas 
+                à se connecter à la base de données MariaDB, et affichait une erreur de type <code>Connection refused</code>.
+            </p>
+            <p><strong>Méthodologie de dépannage — Approche par couches OSI :</strong></p>
+            <ol class="step-list">
+                <li>
+                    <div>
+                        <strong>Validation Couche 3 (Réseau) :</strong> Nous avons d'abord testé la connexion réseau avec une commande 
+                        <code>ping</code> vers la VM de la base de données. Le test a réussi, prouvant que la VM Debian était bien connectée et joignable.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Validation Couche 4 (Transport) :</strong> Nous avons ensuite vérifié si le port de la base de données 
+                        (<code>3306</code>) acceptait les connexions. Le serveur a rejeté la demande, ce qui prouvait que le problème venait de la configuration du logiciel et non du réseau.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Analyse de la configuration MariaDB :</strong> En ouvrant le fichier de configuration 
+                        (<code>50-server.cnf</code>), nous avons remarqué la ligne <code>bind-address = 127.0.0.1</code>. Cette option bloquait toutes les connexions venant de l'extérieur et n'autorisait que la machine locale.
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <strong>Correction appliquée :</strong> Nous avons remplacé cette ligne par <code>bind-address = 0.0.0.0</code> 
+                        pour permettre à MariaDB d'écouter toutes les cartes réseau. Après un redémarrage du service, la connexion avec Django s'est faite immédiatement.
+                    </div>
+                </li>
+            </ol>
+        </div>
+
+  <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🟡</div>
+                <h3>Vérification du stockage persistant</h3>
+                <span class="card-tag">Audit #2</span>
+            </div>
+            <p>
+                Pour s'assurer que les données des formulaires (élèves et notes) étaient bien enregistrées sur le serveur 
+                distant et non dans la base SQLite locale de test sur Windows, nous avons effectué une vérification directement sur la VM MariaDB.
+            </p>
+
+            <div class="preuve-box">
+                <div class="preuve-header">Preuve D — Persistance réelle des données sur MariaDB</div>
+                <div class="preuve-instruction">
+                    Capture d'écran du terminal de la VM Debian après exécution de la commande 
+                    <code>SELECT * FROM app_note;</code>. Les lignes affichées confirment que les informations sont correctement stockées sur l'infrastructure distante.
+                </div>
+                <img src="2.png" alt="Preuve D - Terminal MariaDB" class="preuve-image" style="width:100%; max-height:450px; object-fit:contain; border-radius:8px; border:1px solid #cbd5e1; margin-top:10px;">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">💡</div>
+                <h3>Bilan sur le projet et ce qu'on a appris</h3>
+            </div>
+            <p>
+                Ce projet de SAÉ a montré que les erreurs de connexion ne viennent pas forcément d'un câble mal branché 
+                ou d'une mauvaise adresse IP. Utiliser le **modèle OSI** pour chercher une panne étape par étape permet de trouver le problème beaucoup plus vite sans perdre de temps.
+            </p>
+            <p>
+                On a aussi compris qu'il faut faire très attention à la **configuration des serveurs**. 
+                Une simple ligne comme <code>bind-address</code> peut bloquer complètement l'accès à la base de données si elle est mal réglée.
+            </p>
+            <p>
+                Enfin, travailler avec plusieurs machines virtuelles a demandé de **bien s'organiser en équipe**, 
+                surtout pour partager les accès à la base de données. C'était un très bon exercice pour comprendre comment on gère la sécurité et les droits des utilisateurs dans une entreprise.
+            </p>
+        </div>
+    </main>
+</body>
+</html>      

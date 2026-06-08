@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences — Portfolio Ilkan GUNEY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="profile-section">
+            <div class="profile-tag">En ligne</div>
+            <h2>Ilkan GUNEY</h2>
+            <div class="subtitle">BUT Réseaux &amp; Télécoms · S2</div>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html"><span class="nav-icon">⌂</span><span class="nav-label">Accueil</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="realisations.html"><span class="nav-icon">⚙</span><span class="nav-label">Réalisations &amp; Preuves</span></a>
+            </li>
+            <li class="nav-item active">
+                <a href="competences.html"><span class="nav-icon">✦</span><span class="nav-label">Compétences Validées</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="reflexion.html"><span class="nav-icon">◈</span><span class="nav-label">Démarche Réflexive</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="english.html"><span class="nav-icon">🇬🇧</span><span class="nav-label">English Abstract</span></a>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <div class="sys-info">
+                <div>SAÉ &gt; <span>S2-réseau</span></div>
+                <div>stack &gt; <span>Django · MariaDB</span></div>
+                <div>env &gt; <span>Debian VM</span></div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-header">
+            <div class="breadcrumb">Portfolio / <span>Compétences Validées</span></div>
+            <h1><em>Compétences</em><br>Validées (Référentiel BUT)</h1>
+            <p class="desc">Validation des Acquis d'Apprentissage Critiques (AC) — Programme national BUT R&amp;T</p>
+        </div>
+
+        <!-- COMPÉTENCE 1 -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🌐</div>
+                <h3>Compétence 1 — Administrer les systèmes et les réseaux</h3>
+                <span class="card-tag">C1</span>
+            </div>
+
+            <div class="ac-item">
+                <span class="ac-code">AC11.03</span>
+                <div class="ac-content">
+                    <strong>Configurer le réseau local</strong>
+                    <p>
+                        Configuration d'un adressage cohérent en mode pont pour la communication inter-machines sur le LAN.
+                        La VM Debian a obtenu une IP routable permettant au poste Windows de la joindre directement.
+                    </p>
+                </div>
+            </div>
+
+            <div class="ac-item">
+                <span class="ac-code">AC11.04</span>
+                <div class="ac-content">
+                    <strong>Maîtriser les systèmes d'exploitation</strong>
+                    <p>
+                        Gestion système complète sous Linux Debian : modification des fichiers de configuration réseau,
+                        gestion des politiques des démons système (MariaDB), édition de <code>/etc/hosts</code>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMPÉTENCE 2 -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🤝</div>
+                <h3>Compétence 2 — Connecter les entreprises et les usagers</h3>
+                <span class="card-tag">C2</span>
+            </div>
+
+            <div class="ac-item">
+                <span class="ac-code">AC12.05</span>
+                <div class="ac-content">
+                    <strong>Communiquer avec un tiers en situation professionnelle</strong>
+                    <p>
+                        Planification et déploiement collaboratif de comptes d'accès individualisés pour les coéquipiers
+                        (<code>rafael</code>, <code>hussain</code>), avec attribution rigoureuse des droits SQL.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMPÉTENCE 3 -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">💻</div>
+                <h3>Compétence 3 — Développer des applications réseaux</h3>
+                <span class="card-tag">C3</span>
+            </div>
+
+            <div class="ac-item">
+                <span class="ac-code">AC13.03</span>
+                <div class="ac-content">
+                    <strong>Traduire un algorithme en un programme</strong>
+                    <p>
+                        Écriture de scripts Python pour le traitement des formulaires web, la validation des données
+                        et les calculs dynamiques de moyennes par étudiant et par matière.
+                    </p>
+                </div>
+            </div>
+
+            <div class="ac-item">
+                <span class="ac-code">AC13.05</span>
+                <div class="ac-content">
+                    <strong>Choisir les mécanismes de gestion de données adaptés</strong>
+                    <p>
+                        Liaison via connecteur SQL (<code>mysqlclient</code>) d'un framework web objet (Django) à une
+                        base de données MariaDB externe hébergée sur infrastructure virtuelle dédiée.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Synthèse -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">📋</div>
+                <h3>Synthèse des apprentissages</h3>
+            </div>
+            <p>
+                Cette SAÉ m'a permis d'articuler simultanément des compétences techniques en <strong>administration réseau</strong>,
+                en <strong>sécurisation des accès</strong> et en <strong>développement d'applications</strong>.
+                La dimension distribuée du projet (Windows ↔ VM Debian) m'a confronté à des problématiques réelles
+                rencontrées en entreprise lors du déploiement d'architectures client-serveur.
+            </p>
+        </div>
+    </main>
+</body>
+</html>

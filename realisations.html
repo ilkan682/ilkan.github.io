@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réalisations — Portfolio Ilkan GUNEY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="profile-section">
+            <div class="profile-tag">En ligne</div>
+            <h2>Ilkan GUNEY</h2>
+            <div class="subtitle">BUT Réseaux &amp; Télécoms · S2</div>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html"><span class="nav-icon">⌂</span><span class="nav-label">Accueil</span></a>
+            </li>
+            <li class="nav-item active">
+                <a href="realisations.html"><span class="nav-icon">⚙</span><span class="nav-label">Réalisations &amp; Preuves</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="competences.html"><span class="nav-icon">✦</span><span class="nav-label">Compétences Validées</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="reflexion.html"><span class="nav-icon">◈</span><span class="nav-label">Démarche Réflexive</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="english.html"><span class="nav-icon">🇬🇧</span><span class="nav-label">English Abstract</span></a>
+            </li>
+        </ul>
+        <div class="sidebar-footer">
+            <div class="sys-info">
+                <div>SAÉ &gt; <span>S2-réseau</span></div>
+                <div>stack &gt; <span>Django · MariaDB</span></div>
+                <div>env &gt; <span>Debian VM</span></div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="page-header">
+            <div class="breadcrumb">Portfolio / <span>Réalisations &amp; Preuves</span></div>
+            <h1>Mes <em>Réalisations</em><br>&amp; Preuves Techniques</h1>
+            <p class="desc">Détail des tâches accomplies lors du déploiement de l'infrastructure</p>
+        </div>
+
+        <!-- RÉALISATION 1 -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🌐</div>
+                <h3>1. Infrastructure Réseau &amp; Système (Linux Debian)</h3>
+                <span class="card-tag">Couche 3</span>
+            </div>
+            <p>
+                Sur la machine virtuelle Debian BDD, j'ai configuré les paramètres réseaux pour qu'on a acess a la vm depuis des pc distant  
+            <ul>
+                <li>
+                    <strong>Mode Accès par pont  :</strong> j'ai mis l'interface sur VirtualBox  en mode accés par pont pour sortir de la VM
+                
+                </li>
+                <li>
+                    <strong>Résolution DNS locale :</strong> Ajout du nom d'hôte dans <code>/etc/hosts</code> pour utiliser
+                    l'alias <code>serveur-notes</code> à la place de l'IP brute.
+                </li>
+                <li>
+                    <strong>Écoute réseau MariaDB :</strong> Altération du fichier <code>50-server.cnf</code> pour lever la
+                    restriction locale et accepter les requêtes distantes sur toutes les interfaces.
+                </li>
+            </ul>
+
+            <div class="preuve-box">
+                <div class="preuve-header">Preuve A — Liaison Django-VM réussie</div>
+                <div class="preuve-instruction">
+                     Capture d'écran du terminal Windows lors de l'exécution de
+                    <code>python manage.py migrate</code> affichant <em>"No migrations to apply"</em> sans erreur.
+                    C'est la preuve que Django communique bien avec MariaDB sur la VM.
+                </div>
+                <img src="1.png" alt="Preuve A - Terminal Migrate" class="preuve-image">
+            </div>
+        </div>
+
+        <!-- RÉALISATION 2 -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🔒</div>
+                <h3>2. Gestion et Sécurisation SQL (MariaDB)</h3>
+                <span class="card-tag">Sécurité</span>
+            </div>
+            <p>
+                J'ai mis des règles d'accès à la base de données pour un accès sécurisée:
+            </p>
+            <ul>
+                <li>Création des comptes nominatifs : <code>ilkan</code>, <code>rafael</code>, <code>hussain</code>.</li>
+                <li>Attribution sécurisée des mots de passe individuels.</li>
+                <li>Nous avons configuré les privilèges SQL de l'utilisateur de manière à limiter ses accès uniquement aux tables de la base de données gestion-notes. <cRode>gestion-notes</code>.</li>
+            </ul>
+
+            <div class="preuve-box">
+                <div class="preuve-header">Preuve B — Configuration Django (settings.py)</div>
+                <div class="preuve-instruction">
+                    Extrait du fichier <code>settings.py</code> de l'application Django ciblant le serveur MariaDB distant.
+                </div>
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <div class="code-dot red"></div>
+                        <div class="code-dot yellow"></div>
+                        <div class="code-dot green"></div>
+                        <span class="code-filename">gestion_notes/settings.py</span>
+                    </div>
+                    <pre>DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':   'gestion-notes',
+        'USER':   'ilkan',
+        'PASSWORD': 'toto',
+        'HOST':   'serveur-notes',   # alias /etc/hosts → IP VM
+        'PORT':   '3306',
+    }
+}</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- RÉALISATION 3 -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">🐍</div>
+                <h3>3. Développement Backend (Python / Django)</h3>
+                <span class="card-tag">Dev Web</span>
+            </div>
+            <p>
+                En parallèle de la partie infrastructure, j'ai contribué au développement des vues et de la logique métier
+                de l'application :
+            </p>
+            <ul>
+                <li>Traitement des formulaires d'ajout d'étudiants et de notes.</li>
+                <li>Calcul dynamique des moyennes par matière.</li>
+                <li>Rendu des résultats en temps réel dans les templates HTML.</li>
+            </ul>
+
+            <div class="preuve-box">
+                <div class="preuve-header">Preuve C — Interface applicative fonctionnelle</div>
+                <div class="preuve-instruction">
+                    Capture d'écran de l'interface web <code>gestion-notes</code>
+                    dans le navigateur, qui montre une liste d'étudiants.
+                </div>
+                <img src="image.png" alt="Preuve c - Terminal Migrate" class="preuve-image">
+            </div>
+        </div>
+    </main>
+</body>
+</html>
