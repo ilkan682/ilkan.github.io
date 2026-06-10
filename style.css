@@ -139,6 +139,35 @@ body::before {
     margin-top: 4px;
 }
 
+/* ─── Bouton de retour & Séparateur (Nouveau) ─── */
+.btn-back-portfolio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 10px 8px 20px 8px;
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    color: #4f8ef7;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-back-portfolio:hover {
+    background: rgba(79, 142, 247, 0.12);
+    border-color: rgba(79, 142, 247, 0.3);
+    color: #ffffff;
+    transform: translateX(-2px);
+}
+
+.nav-separator {
+    border-top: 1px solid var(--border);
+    margin: 0 8px 20px 8px;
+}
+
 /* NAV */
 .nav-menu {
     list-style: none;
@@ -665,3 +694,110 @@ ol li {
 .card:nth-child(3) { animation-delay: 0.1s; }
 .card:nth-child(4) { animation-delay: 0.15s; }
 .card:nth-child(5) { animation-delay: 0.2s; }
+
+
+/* ==========================================================================
+   AJOUT DU SYSTÈME RESPONSIVE AUTOMATIQUE (PC & MOBILE)
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        overflow: auto; /* Autorise le scroll global sur mobile */
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 20px 16px;
+    }
+
+    .sidebar::after {
+        width: 100%;
+        height: 1px;
+        top: auto;
+        bottom: 0;
+        background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+
+    .profile-section {
+        text-align: center;
+        padding-bottom: 16px;
+        margin-bottom: 12px;
+    }
+
+    .profile-tag {
+        justify-content: center;
+    }
+
+    /* Style du bouton retour adapté sur smartphone */
+    .btn-back-portfolio {
+        margin: 5px auto 15px auto;
+        width: calc(100% - 16px);
+        justify-content: center;
+    }
+
+    .nav-separator {
+        margin: 0 0 15px 0;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+    }
+
+    .nav-item a {
+        padding: 8px 12px;
+        font-size: 0.8em;
+    }
+
+    .nav-item.active a::before {
+        left: 20%;
+        top: auto;
+        bottom: -1px;
+        height: 2px;
+        width: 60%;
+        border-radius: 2px 2px 0 0;
+    }
+
+    .sidebar-footer {
+        display: none; /* Épure l'affichage mobile */
+    }
+
+    .main-content {
+        padding: 24px 16px;
+        overflow-y: visible; /* Laisse le body gérer le défilement */
+    }
+
+    .page-header h1 {
+        font-size: 1.5em;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr); /* Grille 2x2 sur mobile */
+        gap: 10px;
+    }
+
+    .info-tile {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .ac-item, .step-list li {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
