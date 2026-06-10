@@ -10,6 +10,7 @@
         .btn-back-portfolio {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
             margin: 10px 15px 20px 15px;
             padding: 10px 14px;
@@ -32,6 +33,17 @@
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             margin: 15px;
         }
+
+        /* Ajustement responsive du bouton retour pour le mobile */
+        @media (max-width: 768px) {
+            .btn-back-portfolio {
+                margin: 10px auto;
+                width: calc(100% - 32px);
+            }
+            .nav-separator {
+                margin: 10px 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -42,7 +54,6 @@
             <div class="subtitle">BUT Réseaux &amp; Télécoms · S2</div>
         </div>
 
-        <!-- BOUTON DE RETOUR VERS LA PAGE PROJETS -->
         <a href="projets.html" class="btn-back-portfolio">
             <span>←</span> Retour aux Projets
         </a>
@@ -94,7 +105,7 @@
         <div class="page-header">
             <div class="breadcrumb">Portfolio / <span>Accueil</span></div>
             <h1>Bienvenue sur mon<br><em>Portfolio de Compétences</em></h1>
-            <p class="desc">Présentation  de la SAÉ · Semestre 2 · BUT R&amp;T</p>
+            <p class="desc">Présentation de la SAÉ 2.03 · Semestre 2 · BUT R&amp;T</p>
         </div>
 
         <div class="info-grid">
@@ -120,21 +131,21 @@
             <div class="card-header">
                 <div class="card-icon">📌</div>
                 <h3>Contexte du Projet</h3>
-                <span class="card-tag">SAÉ S2</span>
+                <span class="card-tag">SAÉ 2.03</span>
             </div>
             <p>
-                Pour le deuxième semestre , nous avons développé une
-                <strong>Application Web de Gestion de Notes</strong> qui s'appelle  <code>gestion-notes</code>.
+                Dans le cadre du deuxième semestre de notre BUT Réseaux et Télécommunications, nous avons développé une
+                <strong>Application Web de Gestion de Notes</strong> intitulée <code>gestion-notes</code>.
             </p>
             <p>
-                L'objectif  de cette SAÉ était d'apprendre à <strong> utilser djengo comprendre comment sa fonctionne etc..</strong>
+                L'objectif principal de cette SAÉ était de maîtriser le framework <strong>Django</strong> et de comprendre l'architecture client-serveur globale.
             </p>
             <ul>
                 <li>L'application <strong>Django</strong> s'exécute sur une VM DEBIAN 13.</li>
                 <li>La base de données <strong>MariaDB</strong> est hébergée et isolée sur un serveur virtuel dédié <strong>Debian</strong> via VirtualBox.</li>
             </ul>
             <p>
-                L'objectif était de mettre en place la configuration réseau, le routage et les accès SQL pour lier ces deux machines distantes de manière transparente.
+                L'objectif était de mettre en place la configuration réseau, le routage et les accès SQL pour lier ces deux machines distantes de manière transparente et sécurisée.
             </p>
         </div>
 
@@ -146,7 +157,7 @@
             </div>
             <p>Ce projet a été mené en équipe de trois étudiants :</p>
             <ul>
-                <li><strong>Ilkan GUNEY (BDD &amp; Eleves)</strong> — Modélisation et sécurisation SQL, développement du système CRUD (Ajout/Modif) et optimisation des requêtes de la base de données.</li>
+                <li><strong>Ilkan GUNEY (BDD &amp; Élèves)</strong> — Modélisation et sécurisation SQL, développement du système CRUD (Ajout/Modification d'étudiants) et optimisation des requêtes de la base de données.</li>
                 <li><strong>Hussain (Matières &amp; Serveur)</strong> — Gestion de la connexion BDD, affichage des matières, développement du CRUD matières, configuration réseau et paramétrage de Gunicorn/Nginx.</li>
                 <li><strong>Rafael (CSV &amp; Bulletins)</strong> — Conception des pages HTML, lecture et traitement des fichiers CSV pour l'enregistrement automatique des notes dans MySQL.</li>
             </ul>
@@ -158,10 +169,10 @@
                 <h3>Navigation du Portfolio</h3>
             </div>
             <ul>
-                <li><strong>Réalisations &amp; Preuves</strong> — Détails techniques des tâches accomplies avec captures d'écran</li>
-                <li><strong>Compétences Validées</strong> — Correspondance avec le référentiel BUT (AC)</li>
-                <li><strong>Démarche Réflexive</strong> — Analyse critique des pannes et résolutions</li>
-                <li><strong>English Abstract</strong> — Résumé technique en anglais</li>
+                <li><strong>Réalisations &amp; Preuves</strong> — Détails techniques des tâches accomplies avec captures d'écran.</li>
+                <li><strong>Compétences Validées</strong> — Correspondance avec le référentiel BUT (AC).</li>
+                <li><strong>Démarche Réflexive</strong> — Analyse critique des pannes et résolutions.</li>
+                <li><strong>English Abstract</strong> — Résumé technique en anglais.</li>
             </ul>
         </div>
     </main>
